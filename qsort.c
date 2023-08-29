@@ -11,7 +11,7 @@ int main(){
     printf("enter number of elements ");
     scanf("%d",&p);
     printf("enter values in array ");
-    for(int j;j<p;j++){
+    for(int j=0;j<p;j++){
         scanf("%d",&arr[j]);
     }
     
