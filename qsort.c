@@ -4,6 +4,9 @@
 int asc(const void *a,const void *b){
     return(*(int *)a - *(int *)b);
 }
+int dec(const void *a,const void *b){
+    return(*(int *)b - *(int *)a);
+}
 int main(){
     int p;
     int arr[1000];
@@ -15,8 +18,14 @@ int main(){
         scanf("%d",&arr[j]);
     }
     
-    qsort(arr,p,sizeof(int),asc);
+    qsort(arr,p,4,asc);
     printf("asc\n");
+    for(int i =0;i< p;i++){
+        printf("%d ",arr[i]);
+    }
+    qsort(arr,p,4,dec);
+    printf("\n");
+    printf("dec\n");
     for(int i =0;i< p;i++){
         printf("%d ",arr[i]);
     }
